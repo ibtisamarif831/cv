@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html >
   <head>
-    <meta charset="utf-8">
     <title>My cv</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+  <body class="ani1">
+      <a name="home"></a>
+
     <div class="header">
       <div class="nav">
         <label class="logo">Me </label>
-        <label>| Peronal Resume</label>
+        <label class="me">| Personal Resume</label>
         <nav>
           <ul>
-            <li><a href="#Contact">Contact</a></li>
-            <li><a href="#achievement">Experience</a></li>
-            <li><a href="#About me">About me</a></li>
-            <li><a href="home">Home</a></li>
+<label id="demo"></label>
+              <li><a href="#Connect">Connect</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#home">Home</a></li>
           </ul>
         </nav>
       </div>
@@ -24,42 +26,67 @@
 <!-- about -->
 <div class="container">
   <h1>ABOUT</h1>
-  <div class="divider"></div>
-  <img src="https://scontent.fisb7-1.fna.fbcdn.net/v/t1.0-9/29027837_907245352790565_7506122018101320914_n.jpg?_nc_cat=104&_nc_eui2=AeHUldjJfSAoHsGDzTX5Gz-1Rjjln3LbQRUEoKSrlCzdqn6EDQijLXY7_FmuSPt5Kd6IKDBJ0Y--AaiRXGImcWCLfLOd49xOkVhYGrDpFe6k4w&_nc_ht=scontent.fisb7-1.fna&oh=b7793a7f5193447cfc2050cee4157415&oe=5D0CFDEA" alt="me">
-<h2>My name is ibtisam and i am a web developer</h2>
+  <div class="divider"></div> 
+    <img class="meee" src="me.jpg" alt="me">
+    <a name="education"></a>
+
+<h2>My name is Ibtisam and I am a Web Developer</h2>
 <p>This webpage is about me. you can find stuff that is related to me only. I have
 professional skills in it. i can do the work you assign me easily. That is all i have to say about myself. lets work together
 and know about each other more.</p>
+ 
 <div class="divider"></div>
-<br><br><br><br><br>
-<br><br><br><br><br>
-<br><br><br><br><br>
-<a name="achievement"></a>
-<div class="achievement">
+<br><br>
+<h1>Education:</h1>
 
-  <h1>Experience:</h1>
+<dl>
+  <dt>High school Education:</dt>
+  <dd>Secured 94% in Multan Board from DPS BUREWALA.</dd>
+  <br>
+  <dt>College Education:</dt>
+  <dd>Secured 84% in Multan Board from PUNJAB COLLEGE BUREWALA.</dd><br>
+  <a name="Skills"></a>
+
+  <dt>University:</dt>
+  <dd>Bachelor's in Computer Science from NUST H12.</dd>
+</dl>
+
+<br><br> <br><br><br> 
+<div class="Skills">
+
+  <h1>Skills and Experiance:</h1>
   <div class="col">
-    <h2>None yet</h2>
-    <p>None yet</p>
+    <h2>Languages:</h2>
+    <p>1.HTML.</p>
+    <p>2.CSS</p>
+    <p>3.Javascript</p>
+    <p>4.MySQL</p>
   </div>
   <div class="col">
-    <h2>None yet</h2>
-    <p>None yet</p>
+    <h2>Tools:</h2>
+    <p>1.Netbeans</p>
+    <p>2.Atom</p>
+    <p>3.Photoshop</p>
   </div>
+  <a name="Connect"></a>
 
   <div class="col">
-    <h2>None yet</h2>
-    <p>None yet</p>
+    <h2>Work Experiance:</h2>
+    <p>1. Data science project in NASA</p>
+    <p>2. Internship in Nestle</p>
   </div>
 
 
-<br><br><br><br><br><br><br><br>
+
 </div>
-<a name="Contact"></a>
+<div class="divider"></div>
+
+
+<br>
 <div class="connect">
-  <h1>Contact</h1>
-    <div class="top-divider"></div>
-      <div class="content">
+  <h1>Connect</h1>
+  
+    <div class="connect">
           <div class="form">
               <form action="#">
                   <span>Name</span>
@@ -68,9 +95,49 @@ and know about each other more.</p>
                     <input type="text" name="email" class="email"/>
                     <span>Message</span>
                     <textarea class="message"></textarea>
-                    <button type="button" name="Submit" value="submit">Submit</button>
+                    <input type="submit" name="submite" value="Send" class="submit">
                 </form>
             </div>
+        
+          
+        </div>
+        <div class="social-footer">
+<h3>Follow me:</h3>
+                <ul class="sm-links">
+                <li><a href="https://www.facebook.com/ibtisamarif831" class="facebook"><img src="facebook.png" alt=""></a></li>
+                <li><a href="https://www.twitter.com" class="twitter"><img src="twitter.png" alt=""></a></li>
+                <li><a href="https://www.youtube.com" class="youtube"><img src="youtube.png" alt=""></a></li>
+            </ul>
+        </div>
+        
 </div>
-  </body>
+<br><br>
+<h3>My location:</h3>
+<!--The div element for the map -->
+<div id="map"></div>
+<script>
+// Initialize and add the map
+function initMap() {
+// The location of Uluru
+var uluru = {lat: -25.344, lng: 131.036};
+// The map, centered at Uluru
+var map = new google.maps.Map(
+  document.getElementById('map'), {zoom: 4, center: uluru});
+// The marker, positioned at Uluru
+var marker = new google.maps.Marker({position: uluru, map: map});
+}
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+
+<script src="jquery-3.4.0.min.js">
+$(function(){
+
+
+});
+</script>
+
+ </body>
 </html>
